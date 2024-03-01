@@ -1,0 +1,44 @@
+
+<fieldset>
+  <legend>Mi formulairio</legend>
+  <form [formGroup]="form" >
+    <div fxLayout="column"  fxLayoutGap="10px" fxLayoutAlign="center center">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input type="text" formControlName="nombre"  matInput placeholder="Ingresa nombre">
+        <mat-error *ngIf="f['nombre'].errors?.['required']" >ingresa el nombre</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+        <input type="text" formControlName="categoria" matInput placeholder="Ingresa categoria">
+        <mat-error *ngIf="f['categoria'].errors?.['required']" >ingresa el nombre</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Moneda</mat-label>
+        <mat-select formControlName="moneda">
+          <mat-option *ngFor="let item of monedas" [value]="item.nombre">
+            {{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Estatus</mat-label>
+        <mat-select formControlName="estatus">
+          <mat-option *ngFor="let item of estatus" [value]="item.idestatus">
+            {{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div fxLayout="row" >
+        <button type="button" [disabled]="form.invalid" mat-raised-button color="primary" (click)="onClickGuardar()">
+          <i class="fa-regular fa-floppy-disk"></i>  Guardar
+        </button>
+      </div>
+    </div>
+  </form>
+</fieldset>
+

@@ -1,0 +1,7 @@
+
+<div  fxLayout="row" fxLayoutGap="20px" >
+  <app-formulario-producto [producto]="producto" fxFlex="30" ></app-formulario-producto>
+  <app-listado-producto (editaProducto)="producto = $event" fxFlex> </app-listado-producto>
+</div>
+
+
