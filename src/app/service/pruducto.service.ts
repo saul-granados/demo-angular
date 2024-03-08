@@ -14,7 +14,7 @@ export class PruductoService {
   constructor(
     private http: HttpClient
   ) {
-    this.url = `${environment.url}/producto`;
+    this.url = `${environment.url}/demo/producto`;
   }
 
   findAll(): Observable<IProudcto[]> {

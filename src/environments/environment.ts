@@ -4,8 +4,15 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:8080',
+  url: 'http://localhost:8090/api',
 };
+
+export const credenciales = {
+  desarrollo: {
+    cliente: 'cominviapp_dev',
+    secret: 'dev_sistemas_2020'
+  }
+}
 
 
 

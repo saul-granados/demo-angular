@@ -1,0 +1,24 @@
+<fieldset style="margin-top: 10%; margin-left: 35%; border-color: blue; width: 30%; height: 50%;">
+    <legend >Login</legend>
+    <form [formGroup]="formLogin" style="margin-top: 10%;">
+      <div fxLayout="column"  fxLayoutGap="10px" fxLayoutAlign="center center" >
+        <mat-form-field>
+          <mat-label>Usuario</mat-label>
+          <input type="text" formControlName="usuario"  matInput placeholder="Ingresa su usuario">
+          <mat-error *ngIf="f['usuario'].errors?.['required']" >Ingrese su usuario</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Contraseña</mat-label>
+          <input type="password" formControlName="password" matInput placeholder="Ingrese su contraseña">
+          <mat-error *ngIf="f['password'].errors?.['required']" >Ingrese su contraseña</mat-error>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutGap="7px">
+          <button type="submit" [disabled]="formLogin.invalid" mat-raised-button color="primary" (click)="onClickIngresar()">
+            Ingresar
+          </button>
+        </div>
+      </div>
+    </form>
+  </fieldset>

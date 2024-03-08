@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { PruductoService } from '../service/pruducto.service';
+import { PruductoService } from '../../../service/pruducto.service';
 import { MatTableDataSource } from '@angular/material/table';
-import { IProudcto } from '../interfaces/producto.interface';
+import { IProudcto } from '../../../interfaces/producto.interface';
 import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
@@ -44,6 +44,8 @@ export class ListadoProductoComponent {
       next: (response) => {
         this.dataSource.data = response;
         //console.log(this.dataSource.data);
+      }, error: (error) => {
+
       }
     })
   }

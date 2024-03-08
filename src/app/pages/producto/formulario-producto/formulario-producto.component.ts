@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { typeMoneda } from '../utils/constantes';
-import { IEstatus } from '../interfaces/estatus.interface';
-import { PruductoService } from '../service/pruducto.service';
-import { IProudcto } from '../interfaces/producto.interface';
-import { NotificacionService } from '../service/notificacion.service';
+import { typeMoneda } from '../../../utils/constantes';
+import { IEstatus } from '../../../interfaces/estatus.interface';
+import { PruductoService } from '../../../service/pruducto.service';
+import { IProudcto } from '../../../interfaces/producto.interface';
+import { NotificacionService } from '../../../service/notificacion.service';
 
 
 interface IMoenda {
